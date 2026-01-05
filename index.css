@@ -1,1 +1,86 @@
+/*sets global font and background image for the page*/
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #faffc7;
+color: #ffd1d5;
+}
+
+/*styles the header and navigation bar*/
+#home {
+    color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/*makes this section take full viewport height and center content*/
+.intro-text {
+    width: 450px;
+    height: 350px;
+    background-color:#f2b6f2;
+    border: 2px solid #fc8c8c;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*styles the navigation links*/
+nav{
+    color: rgb(254, 254, 254);
+    text-shadow: rgb(255, 255, 255);
+    display: absolute;
+    justify-content: right;
+    height: 100px;
+    width: 600px;
+}
+ #nav{
+    display: absolute;
+    gap: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: x-large;
+}
+#link{
+    position: relative;
+    text-align: center;
+    color: pink;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-right: 50px;
+}
+#link:hover{
+    color: #f2b6f2;
+    text-shadow: 0 0 10px #f2b6f2;
+}
+#link::after {
+    content: '';
+    height: 0px;
+    width: 10px;
+    bottom: -25px;
+    left: calc(50% - 5px);
+    position: absolute;
+    background-color: #f2b6f2;
+    border-radius: 50px;
+    transition: all 300ms;
+}
+
+#link:hover::after {
+    height: 10px;
+}
+
+/*Sytles the sliding project cards section*/
+#project-cards {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
