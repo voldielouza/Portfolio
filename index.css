@@ -5,17 +5,6 @@ background-color: #faffc7;
 color: #ffd1d5;
 }
 
-/*styles the header and navigation bar*/
-#home {
-    color: black;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-self: center;
-}
 
 /*makes this section take full viewport height and center content*/
 .intro-text {
@@ -30,10 +19,31 @@ color: #ffd1d5;
     color: #faffc7;
 }
 
-/*styles the navigation links*/
-header {
-
+#home {
+    color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-self: center;
 }
+
+.link {
+    text-decoration: none;
+    color: #f2b6f2;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+/*styles the navigation links*/
+
 #logo{
     font-size: 30px;
     font-weight: bold;
@@ -99,13 +109,21 @@ nav{
 
 .ending-text {
     justify-content: space-between;
+    text-align: center;
+    font-size: 25px;
+    color: #f2b6f2;
+}
+
+.info {
+    justify-content: space-between;
     padding: 2rem;
     background-color: #f2b6f2;
     border-radius: 10px;
     margin: 2rem auto;
-    max-width: 800px;
+    max-width: 200px;
     text-align: center;
-    font-size: 25px;
+    font-size: 15px;
     color: #faffc7;
+    display: absolute;
 }
 
