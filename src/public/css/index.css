@@ -1,36 +1,100 @@
-/*sets global font and background image for the page*/
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-color: #faffc7;
-color: #ffd1d5;
+/* 1. Reset and Global Styles */
+* {
+    box-sizing: border-box; /* Prevents padding from breaking width */
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #faffc7;
+    color: #333; /* Darker text for readability on light yellow */
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
 
-/*makes this section take full viewport height and center content*/
-.intro-text {
+/* 2. Navigation Fixes */
+header .header {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    width: 100%;
+    background-color: #f2b6f2; 
+}
+
+#logo {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    width: 100px;
+}
+
+nav {
+    display: flex; 
+    gap: 30px;
+    list-style-type: none;
+    align-items: center;
+    list-style-type: none;
+}
+
+/* Use CLASSES for links, IDs should be unique! */
+.nav-link {
+    position: relative;
+    text-align: center;
+    color: #f2b6f2; 
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    margin: 0;
+}
+
+.nav-link:hover {
+    color: #d184d1;
+    text-shadow: 0 0 5px rgba(242, 182, 242, 0.5);
+}
+
+/* 3. Section Layouts (Home, Projects, Ending) */
+#home, #project-cards, #ending-sec {
+    min-height: 100vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 2rem;
+}
+
+.intro-text {
     background-color: #f2b6f2;
     border-radius: 10px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     max-width: 800px;
+    padding: 2rem;
     text-align: center;
     font-size: 25px;
     color: #faffc7;
 }
 
-#home {
-    color: black;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-self: center;
+/* 4. Contact Section Fixes */
+.info {
+    padding: 1.5rem;
+    background-color: #f2b6f2;
+    border-radius: 10px;
+    margin: 1rem auto;
+    max-width: 300px;
+    text-align: center;
+    font-size: 15px;
+    color: #faffc7;
+    /* Removed 'display: absolute' - use standard block flow or flex */
 }
 
-.link {
+/* 5. Utility Link Circle */
+.link-circle {
+    display: flex;
     text-decoration: none;
     color: #f2b6f2;
     width: 80px;
@@ -40,93 +104,9 @@ color: #ffd1d5;
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s;
 }
 
-/*styles the navigation links*/
-
-#logo{
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-    align-items: left;
-    display: flex;
-    width: 200px;
-    height: 200px;
+.link-circle:hover {
+    transform: scale(1.1);
 }
-
-nav{
-    color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: right;
-    gap: 50px;
-    list-style-type: none;
-    margin: 0;
-    font-size: x-large;
-}
-
-#link{
-    position: relative;
-    text-align: center;
-    color: pink;
-    text-decoration: none;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    gap: 50px;
-    padding-left: 20px;
-}
-#link:hover{
-    color: #f2b6f2;
-    text-shadow: 0 0 10px #f2b6f2;
-}
-#link::after {
-    content: '';
-    height: 0px;
-    width: 10px;
-    bottom: -25px;
-    left: calc(50% - 5px);
-    position: absolute;
-    background-color: #f2b6f2;
-    border-radius: 50px;
-    transition: 3em;
-}
-
-
-/*Styles the sliding project cards section*/
-#project-cards {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/*styles the ending contact section*/
-#ending-sec{
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-}
-
-.ending-text {
-    justify-content: space-between;
-    text-align: center;
-    font-size: 25px;
-    color: #f2b6f2;
-}
-
-.info {
-    justify-content: space-between;
-    padding: 2rem;
-    background-color: #f2b6f2;
-    border-radius: 10px;
-    margin: 2rem auto;
-    max-width: 200px;
-    text-align: center;
-    font-size: 15px;
-    color: #faffc7;
-    display: absolute;
-}
-

@@ -1,0 +1,52 @@
+<%- include('../partials/header.ejs') %>
+
+<main>
+    <section id="home">
+        <div class="intro-text">
+            <h1>Voldie's Portfolio</h1>
+            <p>I am a student and aspiring developer</p>
+            <p>Exploring the world of coding and technology.</p>
+            <p>View my projects and get in touch!</p>
+
+            <button class="link" title="GitHub">
+                <a href="https://github.com/voldielouza" class="link">GitHub</a>
+            </button>
+            
+            <button class="link" title="Email">
+                <a href="mailto:kakulululouza@gmail.com" class="link">Email</a>
+            </button>
+            
+            <button class="link" title="LinkedIn">
+                <a href="https://linkedin.com/in/kakululu-louza/" class="link">LinkedIn</a>
+            </button>
+        </div>
+    </section>
+
+    <section id="project-cards">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <% if (projects.length > 0) { %>
+                <% projects.forEach(project => { %>
+                    <div class="card">
+                        <h3><%= project.name %></h3>
+                        <p><%= project.description %></p>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p>Coming soon...</p>
+            <% } %>
+        </div>
+    </section>
+
+    <section id="ending-sec">
+        <div class="ending-text">
+            <h3>Get in Touch!</h3>
+            <p>I'm always open to discuss new projects and opportunities</p>
+            <div class="info"><p>kakulululouza@gmail.com</p></div>
+            <div class="info"><p>+1 (123) 456-7890</p></div>
+            <div class="info"><p>Charlotte, North Carolina</p></div>
+        </div>
+    </section>
+</main>
+
+<%- include('../partials/footer.ejs') %>
