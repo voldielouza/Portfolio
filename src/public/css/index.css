@@ -1,63 +1,4 @@
-/* 1. Reset and Global Styles */
-* {
-    box-sizing: border-box; /* Prevents padding from breaking width */
-    margin: 0;
-    padding: 0;
-}
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #faffc7;
-    color: #333; /* Darker text for readability on light yellow */
-    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
-}
-
-/* 2. Navigation Fixes */
-header .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    width: 100%;
-    background-color: #f2b6f2; 
-}
-
-#logo {
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-    font-size: 1.5rem;
-    width: 100px;
-}
-
-nav {
-    display: flex; 
-    gap: 30px;
-    list-style-type: none;
-    align-items: center;
-    list-style-type: none;
-}
-
-/* Use CLASSES for links, IDs should be unique! */
-.nav-link {
-    position: relative;
-    text-align: center;
-    color: #f2b6f2; 
-    text-decoration: none;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    transition: color 0.3s ease;
-    text-decoration: none;
-    margin: 0;
-}
-
-.nav-link:hover {
-    color: #d184d1;
-    text-shadow: 0 0 5px rgba(242, 182, 242, 0.5);
-}
-
-/* 3. Section Layouts (Home, Projects, Ending) */
 #home, #project-cards, #ending-sec {
     min-height: 100vh; 
     width: 100%;
@@ -79,7 +20,7 @@ nav {
     color: #faffc7;
 }
 
-/* 4. Contact Section Fixes */
+
 .info {
     padding: 1.5rem;
     background-color: #f2b6f2;
@@ -89,10 +30,8 @@ nav {
     text-align: center;
     font-size: 15px;
     color: #faffc7;
-    /* Removed 'display: absolute' - use standard block flow or flex */
 }
 
-/* 5. Utility Link Circle */
 .link-circle {
     display: flex;
     text-decoration: none;

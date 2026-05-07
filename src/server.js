@@ -19,20 +19,41 @@ app.set('view engine', 'ejs');
 app.use(morgan('dev'));
 app.use(express.static('src/public'));
 
+app.get('/about', (req, res) => {
+    res.render('about', { title: 'About' });
+});
+
+app.get('/project', (req, res) => {
+    res.render('project', { title: 'Project ' });
+});
+
 app.get('/', (req, res) => {
     // Eventually, this data might come from a database or a JSON file
-    const projects = [
+    const project = [
         { name: "My Portfolio", description: "Node.js app" },
         { name: "Weather App", description: "API project" }
     ];
 
     res.render('index', { 
         title: 'Home', 
-        projects: projects // Passing the data to the view
+        project: project // Passing the data to the view
     });
 });
+
 if(process.env.NODE_ENV !== 'test') {
 app.listen(PORT, ()=> console.log(`Server is running on port ${PORT}`));
 }
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    if (!err.status) {
+        err.status = 500;
+        err.message = ('Internal Server Error');
+    }
+
+    res.status(err.status);
+    res.render('error', {error: err});
+});
+
 
 export default app;
